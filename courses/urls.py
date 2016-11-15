@@ -17,5 +17,6 @@ from django.conf.urls import url, include
 # from django.contrib import admin
 
 urlpatterns = [
-    url(r'^', include("apps.course_bot.urls")),
+    url(r'^', include("apps.course_bot.urls", namespace='course_bot')),
+    url(r'^adduser/', include("apps.login_registration.urls", namespace='login_reg'))
 ]

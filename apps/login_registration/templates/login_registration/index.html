@@ -27,7 +27,7 @@
         </form>
         <button type="submit" form="login">Submit</button>
         <h1>Registration</h1>
-        <form action="/process" id="register" method='post'>
+        <form action="{% url 'login_reg:process' %}" id="register" method='post'>
             {% csrf_token %}
             <div id="labels">
                 <p>Email:</p>

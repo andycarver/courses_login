@@ -28,7 +28,7 @@
             <td>{{ Course.course_name }} </td>
             <td>{{ Course.description }}</td>
             <td>{{ Course.created_at }}</td>
-            <td><a href="/confirm/{{Course.id}}">Remove</a></td>
+            <td><a href="{% url 'course_bot:confirm' Course.id %}">Remove</a></td>
         </tr>
         {% endfor %}
         

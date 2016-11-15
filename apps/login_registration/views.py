@@ -45,7 +45,7 @@ def process(request):
         user_id = User.objects.filter(email=request.POST['email'])[0].id
         request.session['user_id'] = user_id
 
-        return redirect('/success')
+        return redirect('login_reg:success')
 
 def login(request):
     errors = []
