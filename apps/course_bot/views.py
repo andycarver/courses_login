@@ -20,6 +20,8 @@ def confirm(request, id):
     return render(request,'course_bot/destroy.html', context)
 
 def destroy(request, id):
-
     Course.objects.filter(id=id).delete()
     return redirect('/')
+
+def users_courses(request):
+    return render(request, 'course_bot/user_course.html')
