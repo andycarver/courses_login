@@ -13,7 +13,7 @@ def add(request):
     description = request.POST['description']
     Course.objects.create(course_name=course_name, description=description)
 
-    return redirect('index')
+    return redirect('course_bot:index')
 
 def confirm(request, id):
     context = {
@@ -25,7 +25,7 @@ def confirm(request, id):
 def destroy(request, id):
     Course.objects.filter(id=id).delete()
     
-    return redirect('index')
+    return redirect('course_bot:index')
 
 def users_courses(request):
     context = {
